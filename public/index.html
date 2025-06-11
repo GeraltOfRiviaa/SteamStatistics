@@ -1,52 +1,105 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Steam statistics</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
 
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-    </head>
+<head>
+    <title>Steam statistics</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <body>
-        <header>
-            <div class="bg-danger text-center p-5 ">
-                <h1 class="display-1">Steam statistics</h1>
-            </div>
-        </header>
-        <main>
-            <div>
-                <h2 class="text-color-danger text-center p-5 ">War Thunder</h2>
-                <div id="list">
-                    
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+
+<body>
+    <header>
+        <div class="bg-danger text-center p-5 text-white">
+            <h1 class="display-1">News</h1>
+            <label for="language">Choose the language you want to view the news in</label>
+            <select name="language" id="language">
+                <option value="cs">Czech</option>
+                <option value="en">English</option>
+                <option value="sk">Slovak</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="ru">Russian</option>
+                <option value="es">Spanish</option>
+            </select>
+        </div>
+
+    </header>
+    <main>
+        <div>
+            <h2 class="text-color-danger text-center p-5 ">Top stories</h2>
+  
+            <div id="list-topStories" class="container ">
+                <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+                    <div id="demo" class="carousel slide mx-auto" data-bs-ride="carousel">
+
+                         Indicators/dots 
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                        </div>
+
+                        <!--The slideshow/carousel--> 
+                        <div class="carousel-inner">
+                        </div>
+
+                         <!--Left and right controls/icons--> 
+                        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </main>
-        <footer>
-            <!-- place footer here -->
-        </footer>
-        <!-- Bootstrap JavaScript Libraries -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-    </body>
-    <script src="main.js"></script>
+            </div>
+            -->
+        </div>
+        
+        <div>
+            <h2 class="text-color-danger text-center p-5 ">All news</h2>
+            <div id="list-allNews" class="container">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <h2 class="text-color-danger text-center p-5 ">Similar news</h2>
+
+            <div>
+                <label for="uuid">UUID of the news you want to see more of</label>
+                <input type="text" name="uuid" placeholder="Enter UUID" id="uuidInput" />
+                <button id="uuid">SET</button>
+            </div>
+
+            <div id="list-similarNews" class="container">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
+    </script>
+</body>
+<script src="main.js"></script>
+
 </html>

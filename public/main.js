@@ -1,19 +1,51 @@
+const language = document.querySelector('#language');
+const uuidButton = document.getElementById('uuid');
+const uuid = document.getElementById('uuidInput');
+console.log(language.value);
 
-async function getTopStories(language,country) {
+
+async function getTopStories(language) {
     try {
-        const response = await fetch(`/api/topStories/:${language}/:${country}`);
+        const response = await fetch(`/api/topStories/${language}`);
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }
         const json = await response.json();
         console.log(json);
+
+        // Předpokládáme, že články jsou v json.data (nebo json.articles)
+        const articles = json.data;
+        const carouselInner = document.querySelector('#demo .carousel-inner');
+        const carouselIndicators = document.querySelector('#demo .carousel-indicators');
+
+        // Vyčisti starý obsah
+        carouselInner.innerHTML = '';
+        carouselIndicators.innerHTML = '';
+
+        articles.forEach((article, idx) => {
+            // Vezmi obrázek z klíče image_url (případně uprav podle skutečné struktury)
+            const imgUrl = article.image_url || '';
+            const activeClass = idx === 0 ? 'active' : '';
+
+            // Přidej obrázek do carouselu
+            carouselInner.innerHTML += `
+                <div class="carousel-item ${activeClass}">
+                    <img src="${imgUrl}" class="d-block w-100" alt="news image">
+                </div>
+            `;
+            // Přidej indikátor
+            carouselIndicators.innerHTML += `
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="${idx}" class="${activeClass}"></button>
+            `;
+        });
+
     } catch (error) {
         console.error(`Nastala chyba: ${error.message}`);
     }
 }
 async function getAllNews(language) {
     try {
-        const response = await fetch(`/api/allNews/:${language}`);
+        const response = await fetch(`/api/allNews/${language}`);
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }
@@ -25,7 +57,7 @@ async function getAllNews(language) {
 }
 async function getSimilar(language,uuid) {
     try {
-        const response = await fetch(`/api/similarNews/:${language}/:${uuid}`);
+        const response = await fetch(`/api/similarNews/${language}/${uuid}`);
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }
@@ -35,11 +67,61 @@ async function getSimilar(language,uuid) {
         console.error(`Nastala chyba: ${error.message}`);
     }
 }
+uuidButton.addEventListener('click', () => {
+    console.log(uuidInput.value);
+});
 
+language.addEventListener('change', (e) => {
+    switch (e.target.value) {
+        case 'en':
+            getTopStories('en');
+            getAllNews('en');
+            getSimilar('en','f76feb57-63a1-444e-a3d8-e5034ec10b53');
+            break;
+        case 'cs':
+            getTopStories('cs');
+            getAllNews('cs');
+            getSimilar('cs','f76feb57-63a1-444e-a3d8-e5034ec10b53');
+            break;
+        case 'de':
+            getTopStories('de');
+            getAllNews('de');
+            getSimilar('de','f76feb57-63a1-444e-a3d8-e5034ec10b53');
+            break;
+        case 'fr':
+            getTopStories('fr');
+            getAllNews('fr');
+            getSimilar('fr','f76feb57-63a1-444e-a3d8-e5034ec10b53');
+            break;
+        case 'es':
+            getTopStories('es');
+            getAllNews('es');
+            getSimilar('es','f76feb57-63a1-444e-a3d8-e5034ec10b53');
+            break;
+        case 'ru':
+            getTopStories('ru');
+            getAllNews('ru');
+            getSimilar('ru','f76feb57-63a1-444e-a3d8-e5034ec10b53');
+            break;
+        case 'sk':
+            getTopStories('sk');
+            getAllNews('sk');
+            getSimilar('sk','f76feb57-63a1-444e-a3d8-e5034ec10b53');
+            break;
+        default:
+            /*
+            getTopStories('en');
+            getAllNews('en');
+            getSimilar('en','f76feb57-63a1-444e-a3d8-e5034ec10b53');
+            */
+    }
 
-getTopStories('en','cz');
-getAllNews('en');
-getSimilar('en','f76feb57-63a1-444e-a3d8-e5034ec10b53')
+}
+);
+
+getTopStories('en');
+//getAllNews('en');
+//getSimilar('en','f76feb57-63a1-444e-a3d8-e5034ec10b53')
 //war thunder id = 236390
 
 /* supported countries
