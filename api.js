@@ -5,12 +5,12 @@ const fetch = require('node-fetch'); // npm install node-fetch@2
 
 app.use(express.static('public'));
 
-app.get('/api/latestNews/:language/:country', async (req, res) => {
+app.get('/api/topStories/:language/:country', async (req, res) => {
     const language = req.params.language;
     const country = req.params.country
-    const newsUrl = `https://newsdata.io/api/1/latest?apikey=pub_3eb33a819d28479cb5fecdd76ef121c1&language=${language}&country=${country}`;
+    const url = `https://api.thenewsapi.com/v1/news/top?api_token=w1FTGJ6swYCaTBIbe3zvZ4Cx9nshXzbJk43HZ45B&locale=${country}&language=${language}&limit=3`;
     try {
-        const response = await fetch(newsUrl);
+        const response = await fetch(url);
         const data = await response.json();
         res.json(data);
     } catch (error) {
@@ -18,12 +18,22 @@ app.get('/api/latestNews/:language/:country', async (req, res) => {
     }
 });
 
-app.get('/api/sources/:language/:country', async (req, res) => {
+app.get('/api/allNews/:language/:country', async (req, res) => {
     const language = req.params.language;
-    const country = req.params.country;
-    const newsUrl = `https://newsdata.io/api/1/sources?apikey=pub_3eb33a819d28479cb5fecdd76ef121c1&language=${language}&country=${country}`;
+    const url = `https://api.thenewsapi.com/v1/news/all?api_token=w1FTGJ6swYCaTBIbe3zvZ4Cx9nshXzbJk43HZ45B&${language}&limit=1`;
     try {
-        const response = await fetch(newsUrl);
+        const response = await fetch(url);
+        const data = await response.json();
+        res.json(data);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+app.get('/api/similarNews/:language/:country/:uuid', async (req, res) => {
+    const language = req.params.language;
+    const url = `https://api.thenewsapi.com/v1/news/similar/f76feb57-63a1-444e-a3d8-e5034ec10b53?api_token=w1FTGJ6swYCaTBIbe3zvZ4Cx9nshXzbJk43HZ45B&language=${language}&limit=1`;
+    try {
+        const response = await fetch(url);
         const data = await response.json();
         res.json(data);
     } catch (error) {
@@ -33,4 +43,4 @@ app.get('/api/sources/:language/:country', async (req, res) => {
 
 
 app.listen(3000, () => console.log('Server běží na portu 3000'));
-//api key = f076f6a9bcd040e6afbef564c923769b
+//api key = w1FTGJ6swYCaTBIbe3zvZ4Cx9nshXzbJk43HZ45B
