@@ -1,7 +1,7 @@
 
-async function getData(gameID) {
+async function getNews(language,country) {
     try {
-        const response = await fetch(`/api/steam/${gameID}`);
+        const response = await fetch(`/api/latestNews/:${language}/:${country}`);
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }
@@ -11,5 +11,20 @@ async function getData(gameID) {
         console.error(`Nastala chyba: ${error.message}`);
     }
 }
-getData(236390);
+async function getSources(language,country) {
+    try {
+        const response = await fetch(`/api/sources/:${language}/:${country}`);
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+        }
+        const json = await response.json();
+        console.log(json);
+    } catch (error) {
+        console.error(`Nastala chyba: ${error.message}`);
+    }
+}
+
+
+getNews('cs,en','cz');
+getSources('cs,en','cz');
 //war thunder id = 236390

@@ -19,7 +19,6 @@
     "start": "nodemon api.js"
   },
   "dependencies": {
-    "chart.js": "^4.4.9",
     "express": "^5.1.0",
     "node-fetch": "^2.7.0"
   }
