@@ -3,7 +3,7 @@ const uuidButton = document.getElementById('uuid');
 const uuid = document.getElementById('uuidInput');
 console.log(language.value);
 
-
+/*
 async function getTopStories(language) {
     try {
         const response = await fetch(`/api/topStories/${language}`);
@@ -26,11 +26,18 @@ async function getTopStories(language) {
             // Vezmi obrázek z klíče image_url (případně uprav podle skutečné struktury)
             const imgUrl = article.image_url || '';
             const activeClass = idx === 0 ? 'active' : '';
-
+            const title = article.title;
+            const description = article.description;
+            const articleUrl = article.url; 
             // Přidej obrázek do carouselu
             carouselInner.innerHTML += `
                 <div class="carousel-item ${activeClass}">
                     <img src="${imgUrl}" class="d-block w-100" alt="news image">
+                        <div class="carousel-caption">
+                            <h3>${title}</h3>
+                            <p>${description}</p>
+                            <button class="btn btn-primary" onclick="window.location.href='${articleUrl}'">Read more</button>
+                        </div>
                 </div>
             `;
             // Přidej indikátor
@@ -43,6 +50,7 @@ async function getTopStories(language) {
         console.error(`Nastala chyba: ${error.message}`);
     }
 }
+    */
 async function getAllNews(language) {
     try {
         const response = await fetch(`/api/allNews/${language}`);
@@ -55,7 +63,7 @@ async function getAllNews(language) {
         console.error(`Nastala chyba: ${error.message}`);
     }
 }
-async function getSimilar(language,uuid) {
+async function getSimilar(language, uuid) {
     try {
         const response = await fetch(`/api/similarNews/${language}/${uuid}`);
         if (!response.ok) {
@@ -76,37 +84,37 @@ language.addEventListener('change', (e) => {
         case 'en':
             getTopStories('en');
             getAllNews('en');
-            getSimilar('en','f76feb57-63a1-444e-a3d8-e5034ec10b53');
+            getSimilar('en', 'f76feb57-63a1-444e-a3d8-e5034ec10b53');
             break;
         case 'cs':
             getTopStories('cs');
             getAllNews('cs');
-            getSimilar('cs','f76feb57-63a1-444e-a3d8-e5034ec10b53');
+            getSimilar('cs', 'f76feb57-63a1-444e-a3d8-e5034ec10b53');
             break;
         case 'de':
             getTopStories('de');
             getAllNews('de');
-            getSimilar('de','f76feb57-63a1-444e-a3d8-e5034ec10b53');
+            getSimilar('de', 'f76feb57-63a1-444e-a3d8-e5034ec10b53');
             break;
         case 'fr':
             getTopStories('fr');
             getAllNews('fr');
-            getSimilar('fr','f76feb57-63a1-444e-a3d8-e5034ec10b53');
+            getSimilar('fr', 'f76feb57-63a1-444e-a3d8-e5034ec10b53');
             break;
         case 'es':
             getTopStories('es');
             getAllNews('es');
-            getSimilar('es','f76feb57-63a1-444e-a3d8-e5034ec10b53');
+            getSimilar('es', 'f76feb57-63a1-444e-a3d8-e5034ec10b53');
             break;
         case 'ru':
             getTopStories('ru');
             getAllNews('ru');
-            getSimilar('ru','f76feb57-63a1-444e-a3d8-e5034ec10b53');
+            getSimilar('ru', 'f76feb57-63a1-444e-a3d8-e5034ec10b53');
             break;
         case 'sk':
             getTopStories('sk');
             getAllNews('sk');
-            getSimilar('sk','f76feb57-63a1-444e-a3d8-e5034ec10b53');
+            getSimilar('sk', 'f76feb57-63a1-444e-a3d8-e5034ec10b53');
             break;
         default:
             /*
@@ -116,10 +124,58 @@ language.addEventListener('change', (e) => {
             */
     }
 
+});
+async function previewTopStoriesFromFile() {
+    try {
+        const response = await fetch(`/testJsonData/topStories_en.json`);
+        if (!response.ok) {
+            throw new Error(`Soubor nenalezen: ${response.status}`);
+        }
+        const json = await response.json();
+        previewTopStories(json.data);
+    } catch (error) {
+        console.error('Chyba při načítání offline dat:', error.message);
+    }
 }
-);
 
-getTopStories('en');
+async function previewTopStories(articles) {
+     
+
+    const carouselInner = document.querySelector('#demo .carousel-inner');
+        const carouselIndicators = document.querySelector('#demo .carousel-indicators');
+
+    // Vyčisti starý obsah
+        carouselInner.innerHTML = '';
+        carouselIndicators.innerHTML = '';
+
+        articles.forEach((article, idx) => {
+            // Vezmi obrázek z klíče image_url (případně uprav podle skutečné struktury)
+            const imgUrl = article.image_url ;
+            const activeClass = idx === 0 ? 'active' : '';
+            const title = article.title;
+            const description = article.description;
+            const articleUrl = article.url; 
+            // Přidej obrázek do carouselu
+            carouselInner.innerHTML += `
+                <div class="carousel-item ${activeClass} col-12">
+                    <img src="${imgUrl}" class="d-block" style="height: 600px; object-fit: span;" alt="news image">
+                        <div class="carousel-caption" style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
+                            <h3>${title}</h3>
+                            <p>${description}</p>
+                            <button class="btn btn-primary" onclick="window.location.href='${articleUrl}'">Read more</button>
+                        </div>
+                </div>
+            `;
+            // Přidej indikátor
+            carouselIndicators.innerHTML += `
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="${idx}" class="${activeClass}"></button>
+            `;
+        });
+
+}
+
+previewTopStoriesFromFile();
+previewTopStories();
 //getAllNews('en');
 //getSimilar('en','f76feb57-63a1-444e-a3d8-e5034ec10b53')
 //war thunder id = 236390

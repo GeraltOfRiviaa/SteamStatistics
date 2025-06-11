@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "found": 7760420,
+    "returned": 3,
+    "limit": 3,
+    "page": 1
+  },
+  "data": [
+    {
+      "uuid": "b1a2723c-5b22-4ec4-8ca5-2cbd2e87fba5",
+      "title": "France mulls recognizing Palestinian state to calm Muslim tensions",
+      "description": "The report stated that the recognition could also serve as a symbolic gesture aimed at bridging the growing divide between France's Jewish and Muslim communitie...",
+      "keywords": "Muslim Brotherhood, France, Palestine, Mike Huckabee, Emmanuel Macron, palestinian statehood, macron",
+      "snippet": "Many in the Muslim community feel that the French government is overly sympathetic to Israel, which they perceive as contributing to their sense of alienation, ...",
+      "url": "https://www.jpost.com/international/article-857290",
+      "image_url": "https://images.jpost.com/image/upload/f_auto,fl_lossy/q_auto/c_fill,g_faces:center,h_720,w_1280/667355",
+      "language": "en",
+      "published_at": "2025-06-11T09:41:16.000000Z",
+      "source": "jpost.com",
+      "categories": [
+        "general"
+      ],
+      "relevance_score": null,
+      "locale": "il"
+    },
+    {
+      "uuid": "d9dc5b9b-b333-4dd5-af7e-e067f016f5d4",
+      "title": "FOCUS:Japan residents with foreign roots raise voices over racial profiling",
+      "description": "Residents in Japan with foreign roots have started speaking out about being subjected to racial profiling by police, with some taking the issue to court, but su...",
+      "keywords": "Japan racial profiling, japan foreign residents, japan foreigners, japan discrimination, racial profiling",
+      "snippet": "By Junko Horiuchi, Spotlight Japan - 1 hour ago - 09:41 | All, Spotlight, Japan\n\nResidents in Japan with foreign roots have started speaking out about being sub...",
+      "url": "https://english.kyodonews.net/news/2025/06/3ef0e771d2d4-focus-japan-residents-with-foreign-roots-raise-voices-over-racial-profiling.html",
+      "image_url": "https://img.kyodonews.net/english/public/images/posts/df2dab28a724175f2af7c5a84e96a3f0/image_l.jpg",
+      "language": "en",
+      "published_at": "2025-06-11T09:41:00.000000Z",
+      "source": "english.kyodonews.net",
+      "categories": [
+        "general"
+      ],
+      "relevance_score": null,
+      "locale": "jp"
+    },
+    {
+      "uuid": "7e0036de-f4a9-4871-90dc-dcd6ae12061f",
+      "title": "China welcomes more foreign businesses to come for all-win results: FM spokesperson",
+      "description": "",
+      "keywords": "",
+      "snippet": "(ECNS) -- China welcomes more foreign businesses to come to China with a global perspective, and achieve win-win and all-win results as the country looks to unl...",
+      "url": "http://www.ecns.cn/news/cns-wire/2025-06-11/detail-ihesictc1429108.shtml",
+      "image_url": "http://image.cns.com.cn/ecns_editor/transform/20250606/uJoH-hesawyz5555806.jpg",
+      "language": "en",
+      "published_at": "2025-06-11T09:40:54.000000Z",
+      "source": "ecns.cn",
+      "categories": [
+        "general"
+      ],
+      "relevance_score": null,
+      "locale": "cn"
+    }
+  ]
+}
