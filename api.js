@@ -31,7 +31,8 @@ app.get('/api/allNews/:language/:country', async (req, res) => {
 });
 app.get('/api/similarNews/:language/:country/:uuid', async (req, res) => {
     const language = req.params.language;
-    const url = `https://api.thenewsapi.com/v1/news/similar/f76feb57-63a1-444e-a3d8-e5034ec10b53?api_token=w1FTGJ6swYCaTBIbe3zvZ4Cx9nshXzbJk43HZ45B&language=${language}&limit=1`;
+    const uuid = req.params.uuid;
+    const url = `https://api.thenewsapi.com/v1/news/similar/${uuid}?api_token=w1FTGJ6swYCaTBIbe3zvZ4Cx9nshXzbJk43HZ45B&language=${language}&limit=1`;
     try {
         const response = await fetch(url);
         const data = await response.json();
