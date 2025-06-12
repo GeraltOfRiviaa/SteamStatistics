@@ -1,9 +1,9 @@
 const language = document.querySelector('#language');
-const uuidButton = document.getElementById('uuid');
-const uuid = document.getElementById('uuidInput');
+const uuidButton = document.getElementById('uuidButton');
+const uuidValue = document.getElementById('uuidValue');
 console.log(language.value);
 
-/*
+
 async function getTopStories(language) {
     try {
         const response = await fetch(`/api/topStories/${language}`);
@@ -50,7 +50,7 @@ async function getTopStories(language) {
         console.error(`Nastala chyba: ${error.message}`);
     }
 }
-    */
+
 async function getAllNews(language) {
     try {
         const response = await fetch(`/api/allNews/${language}`);
@@ -70,13 +70,38 @@ async function getSimilar(language, uuid) {
             throw new Error(`Response status: ${response.status}`);
         }
         const json = await response.json();
-        console.log(json);
+        const articles = json.data;
+        const cards = document.getElementById('list-similarNews');
+    // Vyčisti starý obsah
+        cards.innerHTML = '';
+        
+        articles.forEach((article) => {
+            const imgUrl = article.image_url;
+            const title = article.title;
+            const description = article.description;
+            const articleUrl = article.url;
+            const articleUuid = article.uuid;
+            
+            cards.innerHTML += `
+                <div class="card m-2">
+                    <img src="${imgUrl}" class="card-img-top p-3">
+                    <div class="card-body">
+                        <h5 class="card-title">${title}</h5>
+                        <p class="card-text">${description}</p>
+                    </div>
+                    <a href="${articleUrl}" class="btn btn-primary m-2" style="width: 25%;">Read more</a>
+                    <p style="opacity: 75%;">UUID: ${articleUuid}</p>
+                </div>
+            `;
+        });
+
     } catch (error) {
         console.error(`Nastala chyba: ${error.message}`);
     }
 }
 uuidButton.addEventListener('click', () => {
-    console.log(uuidInput.value);
+    getSimilar(language.value, uuidValue.value);
+    console.log(`UUID: ${uuidValue.value} a jazyk: ${language.value}`);
 });
 
 language.addEventListener('change', (e) => {
@@ -116,66 +141,147 @@ language.addEventListener('change', (e) => {
             getAllNews('sk');
             getSimilar('sk', 'f76feb57-63a1-444e-a3d8-e5034ec10b53');
             break;
-        default:
-            /*
-            getTopStories('en');
-            getAllNews('en');
-            getSimilar('en','f76feb57-63a1-444e-a3d8-e5034ec10b53');
-            */
     }
 
 });
-async function previewTopStoriesFromFile() {
-    try {
-        const response = await fetch(`/testJsonData/topStories_en.json`);
-        if (!response.ok) {
-            throw new Error(`Soubor nenalezen: ${response.status}`);
-        }
-        const json = await response.json();
-        previewTopStories(json.data);
-    } catch (error) {
-        console.error('Chyba při načítání offline dat:', error.message);
-    }
-}
+            getTopStories('en');
+            getAllNews('en');
+            getSimilar('en','f76feb57-63a1-444e-a3d8-e5034ec10b53');
+// async function previewTopStoriesFromFile() {
+//     try {
+//         const response = await fetch(`/testJsonData/topStories_en.json`);
+//         if (!response.ok) {
+//             throw new Error(`Soubor nenalezen: ${response.status}`);
+//         }
+//         const json = await response.json();
+//         previewTopStories(json.data);
+//         previewAllStories(json.data);
+//         previewSimilarStoriesFromFile('f76feb57-63a1-444e-a3d8-e5034ec10b53');
+        
+//     } catch (error) {
+//         console.error('Chyba při načítání offline dat:', error.message);
+//     }
+// }
 
-async function previewTopStories(articles) {
+// async function previewTopStories(articles) {
      
 
-    const carouselInner = document.querySelector('#demo .carousel-inner');
-        const carouselIndicators = document.querySelector('#demo .carousel-indicators');
+//     const carouselInner = document.querySelector('#demo .carousel-inner');
+//         const carouselIndicators = document.querySelector('#demo .carousel-indicators');
 
-    // Vyčisti starý obsah
-        carouselInner.innerHTML = '';
-        carouselIndicators.innerHTML = '';
+//     // Vyčisti starý obsah
+//         carouselInner.innerHTML = '';
+//         carouselIndicators.innerHTML = '';
 
-        articles.forEach((article, idx) => {
-            // Vezmi obrázek z klíče image_url (případně uprav podle skutečné struktury)
-            const imgUrl = article.image_url ;
-            const activeClass = idx === 0 ? 'active' : '';
-            const title = article.title;
-            const description = article.description;
-            const articleUrl = article.url; 
-            // Přidej obrázek do carouselu
-            carouselInner.innerHTML += `
-                <div class="carousel-item ${activeClass} col-12">
-                    <img src="${imgUrl}" class="d-block" style="height: 600px; object-fit: span;" alt="news image">
-                        <div class="carousel-caption" style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
-                            <h3>${title}</h3>
-                            <p>${description}</p>
-                            <button class="btn btn-primary" onclick="window.location.href='${articleUrl}'">Read more</button>
-                        </div>
-                </div>
-            `;
-            // Přidej indikátor
-            carouselIndicators.innerHTML += `
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="${idx}" class="${activeClass}"></button>
-            `;
-        });
+//         articles.forEach((article, idx) => {
+//             // Vezmi obrázek z klíče image_url (případně uprav podle skutečné struktury)
+//             const imgUrl = article.image_url ;
+//             const activeClass = idx === 0 ? 'active' : '';
+//             const title = article.title;
+//             const description = article.description;
+//             const articleUrl = article.url; 
+//             // Přidej obrázek do carouselu
+//             carouselInner.innerHTML += `
+//                 <div class="carousel-item ${activeClass} col-12">
+//                     <img src="${imgUrl}" class="d-block" style="height: 600px; object-fit: span;" alt="news image">
+//                         <div class="carousel-caption" style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
+//                             <h3>${title}</h3>
+//                             <p>${description}</p>
+//                             <button class="btn btn-primary" onclick="window.location.href='${articleUrl}'">Read more</button>
+//                         </div>
+//                 </div>
+//             `;
+//             // Přidej indikátor
+//             carouselIndicators.innerHTML += `
+//                 <button type="button" data-bs-target="#demo" data-bs-slide-to="${idx}" class="${activeClass}"></button>
+//             `;
+//         });
 
-}
+// }
 
-previewTopStoriesFromFile();
-previewTopStories();
+// async function previewAllStories(articles) {
+     
+
+//     const cards = document.getElementById('list-allNews');
+//     // Vyčisti starý obsah
+//         cards.innerHTML = '';
+
+//         articles.forEach((article,) => {
+//             // Vezmi obrázek z klíče image_url (případně uprav podle skutečné struktury)
+//             const imgUrl = article.image_url ;
+//             const title = article.title;
+//             const description = article.description;
+//             const articleUrl = article.url;
+//             const uuid = article.uuid; 
+//             // Přidej obrázek do carouselu
+//             cards.innerHTML += `
+//                 <div class="card m-2">
+//                         <img src="${imgUrl}" class="card-img-top p-3" >
+
+//                         <div class="card-body">
+//                             <h5 class="card-title">${title}</h5>
+//                             <p class="card-text">${description}</p>  
+//                         </div>
+//                         <a href="${articleUrl}" class="btn btn-primary m-2" style="width: 25%;">Read more</a>
+//                         <p style="opacity: 75%;">UUID: ${uuid}</p>
+//                 </div>
+//             `;
+//         });
+
+// }
+
+// async function similarStories(articles) {
+     
+
+    
+
+// }
+// async function previewSimilarStoriesFromFile(uuid) {
+//     try {
+//         // Použijeme stejná data jako pro topStories
+//         const response = await fetch(`/testJsonData/topStories_en.json`);
+//         if (!response.ok) {
+//             throw new Error(`Soubor nenalezen: ${response.status}`);
+//         }
+//         const json = await response.json();
+        
+//         // Filtrovat články podle UUID nebo prostě použít všechny
+//         let articles = json.data;
+//         if (uuid) {
+//             // Pro demo účely předstíráme, že ostatní články jsou "podobné" tomu s daným UUID
+//             articles = json.data.filter(article => article.uuid !== uuid);
+//         }
+        
+//         // Zobrazit články
+//         const cards = document.getElementById('list-similarNews');
+//         cards.innerHTML = '';
+        
+//         articles.forEach((article) => {
+//             const imgUrl = article.image_url;
+//             const title = article.title;
+//             const description = article.description;
+//             const articleUrl = article.url;
+//             const articleUuid = article.uuid;
+            
+//             cards.innerHTML += `
+//                 <div class="card m-2">
+//                     <img src="${imgUrl}" class="card-img-top p-3">
+//                     <div class="card-body">
+//                         <h5 class="card-title">${title}</h5>
+//                         <p class="card-text">${description}</p>
+//                     </div>
+//                     <a href="${articleUrl}" class="btn btn-primary m-2" style="width: 25%;">Read more</a>
+//                     <p style="opacity: 75%;">UUID: ${articleUuid}</p>
+//                 </div>
+//             `;
+//         });
+//     } catch (error) {
+//         console.error('Chyba při načítání offline dat:', error.message);
+//     }
+// }
+
+//previewTopStoriesFromFile();
+//getTopStories('en');
 //getAllNews('en');
 //getSimilar('en','f76feb57-63a1-444e-a3d8-e5034ec10b53')
 //war thunder id = 236390

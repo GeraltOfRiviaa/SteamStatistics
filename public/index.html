@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <div class="bg-danger text-center p-5 text-white">
+        <div class="bg-primary text-center p-5 text-white">
             <h1 class="display-1">News</h1>
             <label for="language">Choose the language you want to view the news in</label>
             <select name="language" id="language">
@@ -32,23 +32,23 @@
     <main>
         <div>
             <h2 class="text-color-danger text-center p-5 ">Top stories</h2>
-  
+
             <div id="list-topStories" class="container-fluid ">
                 <div class="row row-cols-1 row-cols-lg-2 g-4 justify-content-center">
                     <div id="demo" class="carousel slide mx-auto" data-bs-ride="carousel">
 
-                        
+
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
                             <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
                             <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
                         </div>
 
-                        <!--The slideshow/carousel--> 
+                        <!--The slideshow/carousel-->
                         <div class="carousel-inner col-lg-8 ">
                         </div>
 
-                         <!--Left and right controls/icons--> 
+                        <!--Left and right controls/icons-->
                         <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                         </button>
@@ -59,33 +59,34 @@
                 </div>
 
             </div>
-            
+
         </div>
-        
+
         <div>
             <h2 class="text-color-danger text-center p-5 ">All news</h2>
-            <div id="list-allNews" class="container">
-                <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="container-fluid">
+                <div class="row row-cols-2 row-cols-md-4 g-4 justify-content-center" id="list-allNews">
 
                 </div>
-
             </div>
+            <div class="justify-content-center d-flex p-5">
+                <button class="btn bg-primary text-white btn-lg">See more</button>
+            </div>
+
         </div>
         <div>
             <h2 class="text-color-danger text-center p-5 ">Similar news</h2>
-
-            <div>
+            <div class="justify-content-center d-flex mt-1">
                 <label for="uuid">UUID of the news you want to see more of</label>
-                <input type="text" name="uuid" placeholder="Enter UUID" id="uuidInput" />
-                <button id="uuid">SET</button>
+                <input style="margin-left: 1vw;" type="text" name="uuid" placeholder="Enter UUID" id="uuidValue" />
+                <button id="uuidButton" style="margin-left: 1vw;" class="btn btn-primary ">SET</button>
             </div>
+            <div>
 
-            <div id="list-similarNews" class="container">
-                <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                <div class="row row-cols-2 row-cols-md-4 g-4 justify-content-center mt-5" id="list-similarNews">
 
                 </div>
-
-            </div>
         </div>
     </main>
     <footer>

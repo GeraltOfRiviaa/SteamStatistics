@@ -7,7 +7,7 @@ const fetch = require('node-fetch'); // npm install node-fetch@2
 
 app.use(express.static('public'));
 app.use('/testJsonData', express.static(path.join(__dirname, 'testJsonData')));
-/*
+
 app.get('/api/topStories/:language', async (req, res) => {
     const language = req.params.language;
     
@@ -34,7 +34,7 @@ app.get('/api/topStories/:language', async (req, res) => {
 
 app.get('/api/allNews/:language', async (req, res) => {
     const language = req.params.language;
-    const url = `https://api.thenewsapi.com/v1/news/all?api_token=w1FTGJ6swYCaTBIbe3zvZ4Cx9nshXzbJk43HZ45B&${language}&limit=1`;
+    const url = `https://api.thenewsapi.com/v1/news/all?api_token=w1FTGJ6swYCaTBIbe3zvZ4Cx9nshXzbJk43HZ45B&language=${language}&limit=3`;
     try {
         const response = await fetch(url);
         const data = await response.json();
@@ -43,6 +43,7 @@ app.get('/api/allNews/:language', async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
+
 app.get('/api/similarNews/:language/:uuid', async (req, res) => {
     const language = req.params.language;
     const uuid = req.params.uuid;
@@ -56,5 +57,5 @@ app.get('/api/similarNews/:language/:uuid', async (req, res) => {
     }
 });
 
-*/
+
 app.listen(3000, () => console.log('Server běží na portu 3000'));

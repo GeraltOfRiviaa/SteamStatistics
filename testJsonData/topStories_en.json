@@ -1,21 +1,21 @@
 {
   "meta": {
-    "found": 7760420,
+    "found": 7767003,
     "returned": 3,
     "limit": 3,
     "page": 1
   },
   "data": [
     {
-      "uuid": "b1a2723c-5b22-4ec4-8ca5-2cbd2e87fba5",
-      "title": "France mulls recognizing Palestinian state to calm Muslim tensions",
-      "description": "The report stated that the recognition could also serve as a symbolic gesture aimed at bridging the growing divide between France's Jewish and Muslim communitie...",
-      "keywords": "Muslim Brotherhood, France, Palestine, Mike Huckabee, Emmanuel Macron, palestinian statehood, macron",
-      "snippet": "Many in the Muslim community feel that the French government is overly sympathetic to Israel, which they perceive as contributing to their sense of alienation, ...",
-      "url": "https://www.jpost.com/international/article-857290",
-      "image_url": "https://images.jpost.com/image/upload/f_auto,fl_lossy/q_auto/c_fill,g_faces:center,h_720,w_1280/667355",
+      "uuid": "1b470814-e953-45a7-875c-6a19878b9f96",
+      "title": "A rundown of Iran's main nuclear facilities, weapons program",
+      "description": "Iran is now enriching uranium to up to 60% fissile purity, close to the 90% of weapons-grade, at two sites, and has enough material if enriched further for six ...",
+      "keywords": "Iran, Nuclear, United States, uranium, nuclear talks with iran",
+      "snippet": "A sixth round of US-Iran nuclear talks will be held on Sunday in Muscat, the Omani foreign minister said on Thursday, after US President Donald Trump reiterated...",
+      "url": "https://www.jpost.com/middle-east/article-857462",
+      "image_url": "https://images.jpost.com/image/upload/f_auto,fl_lossy/q_auto/c_fill,g_faces:center,h_720,w_1280/422755",
       "language": "en",
-      "published_at": "2025-06-11T09:41:16.000000Z",
+      "published_at": "2025-06-12T11:09:18.000000Z",
       "source": "jpost.com",
       "categories": [
         "general"
@@ -24,38 +24,38 @@
       "locale": "il"
     },
     {
-      "uuid": "d9dc5b9b-b333-4dd5-af7e-e067f016f5d4",
-      "title": "FOCUS:Japan residents with foreign roots raise voices over racial profiling",
-      "description": "Residents in Japan with foreign roots have started speaking out about being subjected to racial profiling by police, with some taking the issue to court, but su...",
-      "keywords": "Japan racial profiling, japan foreign residents, japan foreigners, japan discrimination, racial profiling",
-      "snippet": "By Junko Horiuchi, Spotlight Japan - 1 hour ago - 09:41 | All, Spotlight, Japan\n\nResidents in Japan with foreign roots have started speaking out about being sub...",
-      "url": "https://english.kyodonews.net/news/2025/06/3ef0e771d2d4-focus-japan-residents-with-foreign-roots-raise-voices-over-racial-profiling.html",
-      "image_url": "https://img.kyodonews.net/english/public/images/posts/df2dab28a724175f2af7c5a84e96a3f0/image_l.jpg",
+      "uuid": "b3227a25-7d94-4a73-bf86-de1f2bcbeeef",
+      "title": "Transfer rumors, news: Arsenal meet Gyökeres' agent, deal close?",
+      "description": "Arsenal have moved ahead in the race for Viktor Gyökeres by holding firm talks with the striker's agent on Wednesday. Transfer Talk has the latest news, gossip...",
+      "keywords": "",
+      "snippet": "Tijjani Reijnders speaks for the first time on what he wants to learn from Manchester City after big Premier League move. (1:01)\n\nOpen Extended Reactions\n\nArsen...",
+      "url": "https://www.espn.co.uk/football/story/_/id/45494897/transfer-rumors-news-victor-gyokeres-arsenal-man-united-sporting-cp",
+      "image_url": "https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2025%2F0612%2Fr1505650_1296x729_16%2D9.jpg",
       "language": "en",
-      "published_at": "2025-06-11T09:41:00.000000Z",
-      "source": "english.kyodonews.net",
+      "published_at": "2025-06-12T11:05:57.000000Z",
+      "source": "espn.co.uk",
       "categories": [
-        "general"
+        "sports"
       ],
       "relevance_score": null,
-      "locale": "jp"
+      "locale": "gb"
     },
     {
-      "uuid": "7e0036de-f4a9-4871-90dc-dcd6ae12061f",
-      "title": "China welcomes more foreign businesses to come for all-win results: FM spokesperson",
-      "description": "",
-      "keywords": "",
-      "snippet": "(ECNS) -- China welcomes more foreign businesses to come to China with a global perspective, and achieve win-win and all-win results as the country looks to unl...",
-      "url": "http://www.ecns.cn/news/cns-wire/2025-06-11/detail-ihesictc1429108.shtml",
-      "image_url": "http://image.cns.com.cn/ecns_editor/transform/20250606/uJoH-hesawyz5555806.jpg",
+      "uuid": "be88ebdc-30a1-49d4-aca9-1ab4c929621d",
+      "title": "Air India flight heading for London crashes with more than 240 on board - National",
+      "description": "An Air India passenger plane with more than 240 people on board, including one Canadian, crashed in India's city of Ahmedabad on Thursday.",
+      "keywords": "Plane Crash, Air India, World",
+      "snippet": "Send this page to someone via email\n\nAn Air India passenger plane bound for London with more than 240 people on board including one Canadian crashed Thursday in...",
+      "url": "https://globalnews.ca/news/11237461/air-india-plane-crash/",
+      "image_url": "https://globalnews.ca/wp-content/uploads/2025/06/b4c0151170a41fd11ab447b2a2706c2c56d2f870fe2d1c8f25362a20c6b9fd2b_200737.jpg?quality=85&strip=all&w=720&h=379&crop=1",
       "language": "en",
-      "published_at": "2025-06-11T09:40:54.000000Z",
-      "source": "ecns.cn",
+      "published_at": "2025-06-12T11:03:43.000000Z",
+      "source": "globalnews.ca",
       "categories": [
         "general"
       ],
       "relevance_score": null,
-      "locale": "cn"
+      "locale": "ca"
     }
   ]
 }
