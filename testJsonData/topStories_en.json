@@ -1,61 +1,28 @@
 {
   "meta": {
-    "found": 7767003,
-    "returned": 3,
-    "limit": 3,
+    "found": 7769344,
+    "returned": 1,
+    "limit": 1,
     "page": 1
   },
   "data": [
     {
-      "uuid": "1b470814-e953-45a7-875c-6a19878b9f96",
-      "title": "A rundown of Iran's main nuclear facilities, weapons program",
-      "description": "Iran is now enriching uranium to up to 60% fissile purity, close to the 90% of weapons-grade, at two sites, and has enough material if enriched further for six ...",
-      "keywords": "Iran, Nuclear, United States, uranium, nuclear talks with iran",
-      "snippet": "A sixth round of US-Iran nuclear talks will be held on Sunday in Muscat, the Omani foreign minister said on Thursday, after US President Donald Trump reiterated...",
-      "url": "https://www.jpost.com/middle-east/article-857462",
-      "image_url": "https://images.jpost.com/image/upload/f_auto,fl_lossy/q_auto/c_fill,g_faces:center,h_720,w_1280/422755",
-      "language": "en",
-      "published_at": "2025-06-12T11:09:18.000000Z",
-      "source": "jpost.com",
-      "categories": [
-        "general"
-      ],
-      "relevance_score": null,
-      "locale": "il"
-    },
-    {
-      "uuid": "b3227a25-7d94-4a73-bf86-de1f2bcbeeef",
-      "title": "Transfer rumors, news: Arsenal meet Gyökeres' agent, deal close?",
-      "description": "Arsenal have moved ahead in the race for Viktor Gyökeres by holding firm talks with the striker's agent on Wednesday. Transfer Talk has the latest news, gossip...",
+      "uuid": "82a763ad-fa37-40ba-9366-dbab567520ce",
+      "title": "What's new for Club World Cup, Gold Cup: Keeper rule, offside",
+      "description": "The Club World Cup and the Concacaf Gold Cup kick off Saturday, and both will look a little different with a few laws having been tweaked.",
       "keywords": "",
-      "snippet": "Tijjani Reijnders speaks for the first time on what he wants to learn from Manchester City after big Premier League move. (1:01)\n\nOpen Extended Reactions\n\nArsen...",
-      "url": "https://www.espn.co.uk/football/story/_/id/45494897/transfer-rumors-news-victor-gyokeres-arsenal-man-united-sporting-cp",
-      "image_url": "https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2025%2F0612%2Fr1505650_1296x729_16%2D9.jpg",
+      "snippet": "Alejandro Moreno speaks on LAFC's journey to the Club World Cup and the challenges they will face in the tournament. (0:51)\n\nOpen Extended Reactions\n\nThe FIFA C...",
+      "url": "https://www.espn.com/soccer/story/_/id/45497406/laws-club-world-cup-concacaf-gold-cup-goalkeeper-offside-penalty",
+      "image_url": "https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2025%2F0612%2Fr1505806_1296x729_16%2D9.jpg",
       "language": "en",
-      "published_at": "2025-06-12T11:05:57.000000Z",
-      "source": "espn.co.uk",
+      "published_at": "2025-06-12T19:12:01.000000Z",
+      "source": "espn.com",
       "categories": [
-        "sports"
-      ],
-      "relevance_score": null,
-      "locale": "gb"
-    },
-    {
-      "uuid": "be88ebdc-30a1-49d4-aca9-1ab4c929621d",
-      "title": "Air India flight heading for London crashes with more than 240 on board - National",
-      "description": "An Air India passenger plane with more than 240 people on board, including one Canadian, crashed in India's city of Ahmedabad on Thursday.",
-      "keywords": "Plane Crash, Air India, World",
-      "snippet": "Send this page to someone via email\n\nAn Air India passenger plane bound for London with more than 240 people on board including one Canadian crashed Thursday in...",
-      "url": "https://globalnews.ca/news/11237461/air-india-plane-crash/",
-      "image_url": "https://globalnews.ca/wp-content/uploads/2025/06/b4c0151170a41fd11ab447b2a2706c2c56d2f870fe2d1c8f25362a20c6b9fd2b_200737.jpg?quality=85&strip=all&w=720&h=379&crop=1",
-      "language": "en",
-      "published_at": "2025-06-12T11:03:43.000000Z",
-      "source": "globalnews.ca",
-      "categories": [
+        "sports",
         "general"
       ],
       "relevance_score": null,
-      "locale": "ca"
+      "locale": "us"
     }
   ]
 }

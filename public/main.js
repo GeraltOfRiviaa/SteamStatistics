@@ -1,18 +1,18 @@
 const language = document.querySelector('#language');
 const uuidButton = document.getElementById('uuidButton');
 const uuidValue = document.getElementById('uuidValue');
+const category = document.querySelector('#category');
 console.log(language.value);
+const limit = 1;
 
-
-async function getTopStories(language) {
+async function getTopStories(language, limit) {
     try {
-        const response = await fetch(`/api/topStories/${language}`);
+        const response = await fetch(`/api/topStories/${language}/${limit}`);
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }
         const json = await response.json();
-        console.log(json);
-
+        console.log(json + ' - top stories');
         // Předpokládáme, že články jsou v json.data (nebo json.articles)
         const articles = json.data;
         const carouselInner = document.querySelector('#demo .carousel-inner');
@@ -51,102 +51,105 @@ async function getTopStories(language) {
     }
 }
 
-async function getAllNews(language) {
+async function getAllNews(language,limit, category) {
     try {
-        const response = await fetch(`/api/allNews/${language}`);
-        if (!response.ok) {
-            throw new Error(`Response status: ${response.status}`);
-        }
-        const json = await response.json();
-        console.log(json);
-    } catch (error) {
-        console.error(`Nastala chyba: ${error.message}`);
-    }
-}
-async function getSimilar(language, uuid) {
-    try {
-        const response = await fetch(`/api/similarNews/${language}/${uuid}`);
+        const response = await fetch(`/api/allNews/${language}/${limit}/${category}`);
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }
         const json = await response.json();
         const articles = json.data;
-        const cards = document.getElementById('list-similarNews');
-    // Vyčisti starý obsah
-        cards.innerHTML = '';
-        
-        articles.forEach((article) => {
-            const imgUrl = article.image_url;
-            const title = article.title;
-            const description = article.description;
-            const articleUrl = article.url;
-            const articleUuid = article.uuid;
-            
-            cards.innerHTML += `
-                <div class="card m-2">
-                    <img src="${imgUrl}" class="card-img-top p-3">
-                    <div class="card-body">
-                        <h5 class="card-title">${title}</h5>
-                        <p class="card-text">${description}</p>
-                    </div>
-                    <a href="${articleUrl}" class="btn btn-primary m-2" style="width: 25%;">Read more</a>
-                    <p style="opacity: 75%;">UUID: ${articleUuid}</p>
-                </div>
-            `;
-        });
+        console.log(json + ' - all news');
 
+        const cards = document.getElementById('list-allNews');
+        // Vyčisti starý obsah
+            cards.innerHTML = '';
+
+            articles.forEach((article,) => {
+                const imgUrl = article.image_url ;
+                const title = article.title;
+                const description = article.description;
+                const articleUrl = article.url;
+                console.log('getAllNews: Spustilo se forEach');
+                cards.innerHTML += `
+                    <div class="card m-2">
+                            <img src="${imgUrl}" class="card-img-top p-3" >
+
+                            <div class="card-body">
+                                <h5 class="card-title">${title}</h5>
+                                <p class="card-text">${description}</p>  
+                            </div>
+                            <a href="${articleUrl}" class="btn btn-primary m-2" style="width: 25%;">Read more</a>
+                    </div>
+                `;
+            });
     } catch (error) {
         console.error(`Nastala chyba: ${error.message}`);
     }
 }
-uuidButton.addEventListener('click', () => {
-    getSimilar(language.value, uuidValue.value);
-    console.log(`UUID: ${uuidValue.value} a jazyk: ${language.value}`);
+category.addEventListener('change', (e) => {
+    switch (e.target.value) {
+        case 'general':
+            getAllNews(language.value, limit, 'general');
+            break;
+        case 'business':
+            getAllNews(language.value, limit, 'business');
+            break;
+        case 'entertainment':
+            getAllNews(language.value, limit, 'entertainment');
+            break;
+        case 'health':
+            getAllNews(language.value, limit, 'health');
+            break;
+        case 'science':
+            getAllNews(language.value, limit, 'science');
+            break;
+        case 'sports':
+            getAllNews(language.value, limit, 'sports');
+            break;
+        case 'technology':
+            getAllNews(language.value, limit, 'technology');
+            break;
+    }
 });
 
 language.addEventListener('change', (e) => {
     switch (e.target.value) {
         case 'en':
-            getTopStories('en');
-            getAllNews('en');
-            getSimilar('en', 'f76feb57-63a1-444e-a3d8-e5034ec10b53');
+            getTopStories('en', limit);
+            getAllNews('en', limit, 'general');
             break;
         case 'cs':
-            getTopStories('cs');
-            getAllNews('cs');
-            getSimilar('cs', 'f76feb57-63a1-444e-a3d8-e5034ec10b53');
+            getTopStories('cs', limit);
+            getAllNews('cs', limit, 'general');
             break;
         case 'de':
-            getTopStories('de');
-            getAllNews('de');
-            getSimilar('de', 'f76feb57-63a1-444e-a3d8-e5034ec10b53');
+            getTopStories('de', limit);
+            getAllNews('de', limit, 'general');
             break;
         case 'fr':
-            getTopStories('fr');
-            getAllNews('fr');
-            getSimilar('fr', 'f76feb57-63a1-444e-a3d8-e5034ec10b53');
+            getTopStories('fr', limit);
+            getAllNews('fr', limit, 'general');
             break;
         case 'es':
-            getTopStories('es');
-            getAllNews('es');
-            getSimilar('es', 'f76feb57-63a1-444e-a3d8-e5034ec10b53');
+            getTopStories('es', limit);
+            getAllNews('es', limit, 'general');
             break;
         case 'ru':
-            getTopStories('ru');
-            getAllNews('ru');
-            getSimilar('ru', 'f76feb57-63a1-444e-a3d8-e5034ec10b53');
+            getTopStories('ru', limit);
+            getAllNews('ru', limit, 'general');
             break;
         case 'sk':
-            getTopStories('sk');
-            getAllNews('sk');
-            getSimilar('sk', 'f76feb57-63a1-444e-a3d8-e5034ec10b53');
+            getTopStories('sk', limit);
+            getAllNews('sk', limit, 'general');
             break;
     }
-
 });
-            getTopStories('en');
-            getAllNews('en');
-            getSimilar('en','f76feb57-63a1-444e-a3d8-e5034ec10b53');
+
+getTopStories('en', limit);
+getAllNews('en', limit);
+
+
 // async function previewTopStoriesFromFile() {
 //     try {
 //         const response = await fetch(`/testJsonData/topStories_en.json`);

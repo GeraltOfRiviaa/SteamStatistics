@@ -4,14 +4,15 @@ const app = express();
 const fs = require('fs');
 const path = require('path');
 const fetch = require('node-fetch'); // npm install node-fetch@2
+const token = "V2E8azUwWY9XYWPBwxHY3USBjX5JtTSRQdmr3dpN"
 
 app.use(express.static('public'));
 app.use('/testJsonData', express.static(path.join(__dirname, 'testJsonData')));
 
-app.get('/api/topStories/:language', async (req, res) => {
+app.get('/api/topStories/:language/:limit', async (req, res) => {
     const language = req.params.language;
-    
-    const url = `https://api.thenewsapi.com/v1/news/top?api_token=w1FTGJ6swYCaTBIbe3zvZ4Cx9nshXzbJk43HZ45B&language=${language}&limit=3`;
+    const limit = req.params.limit || 3;
+    const url = `https://api.thenewsapi.com/v1/news/top?api_token=${token}&language=${language}&limit=${limit}`;
     try {
         const response = await fetch(url);
         const data = await response.json();
@@ -32,22 +33,11 @@ app.get('/api/topStories/:language', async (req, res) => {
     }
 });
 
-app.get('/api/allNews/:language', async (req, res) => {
+app.get('/api/allNews/:language/:limit/:category', async (req, res) => {
     const language = req.params.language;
-    const url = `https://api.thenewsapi.com/v1/news/all?api_token=w1FTGJ6swYCaTBIbe3zvZ4Cx9nshXzbJk43HZ45B&language=${language}&limit=3`;
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        res.json(data);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
-
-app.get('/api/similarNews/:language/:uuid', async (req, res) => {
-    const language = req.params.language;
-    const uuid = req.params.uuid;
-    const url = `https://api.thenewsapi.com/v1/news/similar/${uuid}?api_token=w1FTGJ6swYCaTBIbe3zvZ4Cx9nshXzbJk43HZ45B&language=${language}&limit=1`;
+    const limit = req.params.limit || 3;
+    const category = req.params.category || 'general';
+    const url = `https://api.thenewsapi.com/v1/news/all?api_token=${token}&language=${language}&limit=${limit}&category=${category}`;
     try {
         const response = await fetch(url);
         const data = await response.json();
