@@ -1,61 +1,61 @@
 {
   "meta": {
-    "found": 7771965,
+    "found": 7772120,
     "returned": 3,
     "limit": 3,
     "page": 1
   },
   "data": [
     {
-      "uuid": "deec227c-df7d-482f-87e4-922d75084b8e",
-      "title": "New Highway Linking Melli And Singtam In Sikkim To Ease NH10 Congestion, Bypass West Bengal",
+      "uuid": "852920f7-c96d-4d06-be39-d0dd262b2fd9",
+      "title": "Digital innovations breathe new life into Foguang temple",
       "description": "",
-      "keywords": "Sikkim, Minister of Road Transport and Highways Nitin Gadkari",
-      "snippet": "The Ministry of Road Transport and Highways has approved a new Greenfield Highway project in Sikkim, which will connect Melli to Singtam bypassing NH 10 congest...",
-      "url": "https://swarajyamag.com/news-brief/new-highway-linking-melli-and-singtam-in-sikkim-to-ease-nh10-congestion-bypass-west-bengal",
-      "image_url": "https://swarajya.gumlet.io/swarajya/2022-02/bf3fa9e2-1242-4ff8-8ef7-75162e7be1a8/Nitin_Gadkari_1_16402465133x2.jpg?w=1200&h=600&format=jpg",
+      "keywords": "",
+      "snippet": "A bird's eye view of Foguang temple in Mount Wutai in the temple. (ZHU XINGXIN/CHINA DAILY)\n\nThe phenomenal success of Black Myth: Wukongnot only elevated the i...",
+      "url": "http://www.ecns.cn/news/culture/2025-06-13/detail-ihesictc1432254.shtml",
+      "image_url": "http://image.cns.com.cn/ecns_editor/transform/20250606/uJoH-hesawyz5555806.jpg",
       "language": "en",
-      "published_at": "2025-06-13T08:23:43.000000Z",
-      "source": "swarajyamag.com",
+      "published_at": "2025-06-13T09:21:50.000000Z",
+      "source": "ecns.cn",
       "categories": [
         "general"
       ],
       "relevance_score": null,
-      "locale": "in"
+      "locale": "cn"
     },
     {
-      "uuid": "95214731-6677-4f1a-ba57-111822f1f1de",
-      "title": "NHAI Caps Project Allocation Per Engineer At 10 To Enhance Supervision Quality On National Highways",
-      "description": "",
-      "keywords": "engineer, National Highway Authority of India (NHAI)",
-      "snippet": "In a bid to improve quality control and supervision of National Highway works, the National Highways Authority of India (NHAI) has issued new guidelines limitin...",
-      "url": "https://swarajyamag.com/news-brief/nhai-caps-project-allocation-per-engineer-at-10-to-enhance-supervision-quality-on-national-highways",
-      "image_url": "https://swarajya.gumlet.io/swarajya/2023-02/c10c0a2d-782b-47f0-82c5-53c6e6221870/Ambala_Kotputli_greenfield_corridor.jpg?w=1200&h=600&format=jpg",
+      "uuid": "7662970d-bde3-4a53-98ca-5fbe46f60475",
+      "title": "Israeli leaders react to Operation 'Rising Lion'",
+      "description": "Israeli politicians react to Israel's airstrikes on Iran as part of Operation",
+      "keywords": "IDF, Iran, Nuclear, Yair Lapid, Isaac Herzog, Bezalel Smotrich, Yair Golan, airstrike, Operation Rising Lion",
+      "snippet": "\"He crouched, he lay down like a lion; and like a lioness, who shall rouse him?\" In the name of God we will act, and with God’s help we will succeed,\" Smotric...",
+      "url": "https://www.jpost.com/israel-news/article-857601",
+      "image_url": "https://images.jpost.com/image/upload/f_auto,fl_lossy/q_auto/c_fill,g_faces:center,h_720,w_1280/615633",
       "language": "en",
-      "published_at": "2025-06-13T08:23:43.000000Z",
-      "source": "swarajyamag.com",
+      "published_at": "2025-06-13T09:20:09.000000Z",
+      "source": "jpost.com",
       "categories": [
         "general"
       ],
       "relevance_score": null,
-      "locale": "in"
+      "locale": "il"
     },
     {
-      "uuid": "b0f98841-e69c-4c14-8020-46131c061e89",
-      "title": "Kailash Mansarovar Yatra Via Nathu La In Sikkim To Resume After Years; First Batch Of 50 Pilgrims To Reach Gangtok On 15 June",
+      "uuid": "04360067-7fde-43d6-84ee-d6390262132a",
+      "title": "Strides made in cultural preservation",
       "description": "",
-      "keywords": "Nathu La, Sikkim government, Kailash Mansarovar Yatra",
-      "snippet": "The Kailash Mansarovar Yatra through the Nathu La route in Sikkim is set to resume, with the first batch of 50 pilgrims expected to reach Gangtok on 15 June.\n\nT...",
-      "url": "https://swarajyamag.com/news-brief/kailash-mansarovar-yatra-via-nathu-la-in-sikkim-to-resume-after-years-first-batch-of-50-pilgrims-to-reach-gangtok-on-15-june",
-      "image_url": "https://swarajya.gumlet.io/swarajya/2023-04/00ef9c40-c2e3-495b-9719-8acc29b20495/Sikkim.png?w=1200&h=600&format=jpg",
+      "keywords": "",
+      "snippet": "From time to time, Liang Desong still finds it hard to come to terms with the years he spent away from his art — doing odd jobs in farming and construction to...",
+      "url": "http://www.ecns.cn/news/culture/2025-06-13/detail-ihesictc1432228.shtml",
+      "image_url": "http://image.cns.com.cn/ecns_editor/transform/20250606/uJoH-hesawyz5555806.jpg",
       "language": "en",
-      "published_at": "2025-06-13T08:23:43.000000Z",
-      "source": "swarajyamag.com",
+      "published_at": "2025-06-13T09:12:53.000000Z",
+      "source": "ecns.cn",
       "categories": [
         "general"
       ],
       "relevance_score": null,
-      "locale": "in"
+      "locale": "cn"
     }
   ]
 }

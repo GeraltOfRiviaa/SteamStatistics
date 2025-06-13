@@ -2,7 +2,7 @@ const language = document.querySelector('#language');
 const uuidButton = document.getElementById('uuidButton');
 const uuidValue = document.getElementById('uuidValue');
 const category = document.querySelector('#category');
-console.log(language.value);
+//console.log(language.value);
 const limit = 3;
 
 
@@ -35,10 +35,10 @@ async function getTopStories(language, limit) {
             throw new Error(`Response status: ${response.status}`);
         }
         const json = await response.json();
-        console.log(json + ' - top stories');
+        
         // Předpokládáme, že články jsou v json.data (nebo json.articles)
         const articles = json.data;
-        
+         console.log('getTopStories: Data = ' + JSON.stringify(articles));
         // Vyčisti starý obsah včetně loadingu
         carouselInner.innerHTML = '';
         carouselIndicators.innerHTML = '';
@@ -108,7 +108,6 @@ async function getAllNews(language, limit, category) {
             }
             const json = await response.json();
             const articles = json.data;
-            console.log(json + ' - all news');
 
             // Vyčisti starý obsah včetně loadingu
             cards.innerHTML = '';
@@ -120,7 +119,7 @@ async function getAllNews(language, limit, category) {
                 const title = article.title;
                 const description = article.description;
                 const articleUrl = article.url;
-                console.log('getAllNews: Spustilo se forEach');
+                //console.log('getAllNews: Spustilo se forEach');
                 cards.innerHTML += `
                     <div class="card m-2 d-flex flex-column" style="height: 600px;">
                         <div class="image-container" style="flex-grow: 1; overflow: hidden; margin-bottom: 10px;margin-top: 10px;">
@@ -160,46 +159,46 @@ async function getAllNews(language, limit, category) {
         }
     }
 }
+
 category.addEventListener('change', () => {
     switch (category.value) {
         case 'general':
-            console.log('Selected category: general');
+            
             getAllNews(language.value, limit, category.value);
             break;
         case 'business':
-            console.log('Selected category: business');
+            
             getAllNews(language.value, limit, category.value);
             break;
         case 'entertainment':
-            console.log('Selected category: entertainment');
+            
             getAllNews(language.value, limit, category.value);
             break;
         case 'health':
-            console.log('Selected category: health');
+            
             getAllNews(language.value, limit, category.value);
             break;
         case 'science':
-            console.log('Selected category: science');
+            
             getAllNews(language.value, limit, category.value);
             break;
         case 'sports':
-            console.log('Selected category: sports');
+            
             getAllNews(language.value, limit, category.value);
             break;
         case 'technology':
-            console.log('Selected category: technology');
+            
             getAllNews(language.value, limit, category.value);
             break;
         case 'politics':
-            console.log('Selected category: politics');
+            
             getAllNews(language.value, limit, category.value);
             break;
         case 'food':
-            console.log('Selected category: food');
+            
             getAllNews(language.value, limit, category.value);
             break;
         case 'travel':
-            console.log('Selected category: travel');
             getAllNews(language.value, limit, category.value);
             break;
     }
@@ -210,31 +209,31 @@ language.addEventListener('change', (e) => {
     switch (language.value) {
         case 'en':
             getTopStories('en', limit);
-            getAllNews('en', limit, 'general');
+            getAllNews('en', limit, category.value);
             break;
         case 'cs':
             getTopStories('cs', limit);
-            getAllNews('cs', limit, 'general');
+            getAllNews('cs', limit, category.value);
             break;
         case 'de':
             getTopStories('de', limit);
-            getAllNews('de', limit, 'general');
+            getAllNews('de', limit, category.value);
             break;
         case 'fr':
             getTopStories('fr', limit);
-            getAllNews('fr', limit, 'general');
+            getAllNews('fr', limit, category.value);
             break;
         case 'es':
             getTopStories('es', limit);
-            getAllNews('es', limit, 'general');
+            getAllNews('es', limit, category.value);
             break;
         case 'ru':
             getTopStories('ru', limit);
-            getAllNews('ru', limit, 'general');
+            getAllNews('ru', limit, category.value);
             break;
         case 'sk':
             getTopStories('sk', limit);
-            getAllNews('sk', limit, 'general');
+            getAllNews('sk', limit, category.value);
             break;
     }
 });
