@@ -87,34 +87,43 @@ async function getAllNews(language,limit, category) {
         console.error(`Nastala chyba: ${error.message}`);
     }
 }
-category.addEventListener('change', (e) => {
-    switch (e.target.value) {
+category.addEventListener('change', () => {
+    switch (category.value) {
         case 'general':
-            getAllNews(language.value, limit, 'general');
+            getAllNews(language.value, limit, category.value);
             break;
         case 'business':
-            getAllNews(language.value, limit, 'business');
+            getAllNews(language.value, limit, category.value);
             break;
         case 'entertainment':
-            getAllNews(language.value, limit, 'entertainment');
+            getAllNews(language.value, limit, category.value);
             break;
         case 'health':
-            getAllNews(language.value, limit, 'health');
+            getAllNews(language.value, limit, category.value);
             break;
         case 'science':
-            getAllNews(language.value, limit, 'science');
+            getAllNews(language.value, limit, category.value);
             break;
         case 'sports':
-            getAllNews(language.value, limit, 'sports');
+            getAllNews(language.value, limit, category.value);
             break;
         case 'technology':
-            getAllNews(language.value, limit, 'technology');
+            getAllNews(language.value, limit, category.value);
             break;
+            case 'politics':
+                getAllNews(language.value, limit, category.value);
+                break;
+            case 'food':
+                getAllNews(language.value, limit, category.value);
+                break;
+            case 'travel':
+                getAllNews(language.value, limit, category.value);
+                break;
     }
 });
 
 language.addEventListener('change', (e) => {
-    switch (e.target.value) {
+    switch (language.value) {
         case 'en':
             getTopStories('en', limit);
             getAllNews('en', limit, 'general');

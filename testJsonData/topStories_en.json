@@ -1,28 +1,27 @@
 {
   "meta": {
-    "found": 7769344,
+    "found": 7771476,
     "returned": 1,
     "limit": 1,
     "page": 1
   },
   "data": [
     {
-      "uuid": "82a763ad-fa37-40ba-9366-dbab567520ce",
-      "title": "What's new for Club World Cup, Gold Cup: Keeper rule, offside",
-      "description": "The Club World Cup and the Concacaf Gold Cup kick off Saturday, and both will look a little different with a few laws having been tweaked.",
-      "keywords": "",
-      "snippet": "Alejandro Moreno speaks on LAFC's journey to the Club World Cup and the challenges they will face in the tournament. (0:51)\n\nOpen Extended Reactions\n\nThe FIFA C...",
-      "url": "https://www.espn.com/soccer/story/_/id/45497406/laws-club-world-cup-concacaf-gold-cup-goalkeeper-offside-penalty",
-      "image_url": "https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2025%2F0612%2Fr1505806_1296x729_16%2D9.jpg",
+      "uuid": "5d91ef1e-0529-427b-966e-d36b14e295b1",
+      "title": "El Al cancels all flights, Israel continues striking Iran nuclear sites",
+      "description": "The company confirmed it is acting in accordance with instructions from the country's security and aviation authorities.",
+      "keywords": "El Al, Iran, will israel attack iran, Operation Rising Lion",
+      "snippet": "El Al aircraft (credit: AVSHALOM SASSONI)\n\nCustomers with flights between June 13 and 28 can convert their tickets into credit vouchers for future use. Addition...",
+      "url": "https://www.jpost.com/israel-news/article-857589",
+      "image_url": "https://images.jpost.com/image/upload/f_auto,fl_lossy/q_auto/c_fill,g_faces:center,h_720,w_1280/662663",
       "language": "en",
-      "published_at": "2025-06-12T19:12:01.000000Z",
-      "source": "espn.com",
+      "published_at": "2025-06-13T06:00:26.000000Z",
+      "source": "jpost.com",
       "categories": [
-        "sports",
         "general"
       ],
       "relevance_score": null,
-      "locale": "us"
+      "locale": "il"
     }
   ]
 }
