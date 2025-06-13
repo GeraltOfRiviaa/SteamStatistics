@@ -1,27 +1,61 @@
 {
   "meta": {
-    "found": 7771476,
-    "returned": 1,
-    "limit": 1,
+    "found": 7771694,
+    "returned": 3,
+    "limit": 3,
     "page": 1
   },
   "data": [
     {
-      "uuid": "5d91ef1e-0529-427b-966e-d36b14e295b1",
-      "title": "El Al cancels all flights, Israel continues striking Iran nuclear sites",
-      "description": "The company confirmed it is acting in accordance with instructions from the country's security and aviation authorities.",
-      "keywords": "El Al, Iran, will israel attack iran, Operation Rising Lion",
-      "snippet": "El Al aircraft (credit: AVSHALOM SASSONI)\n\nCustomers with flights between June 13 and 28 can convert their tickets into credit vouchers for future use. Addition...",
-      "url": "https://www.jpost.com/israel-news/article-857589",
-      "image_url": "https://images.jpost.com/image/upload/f_auto,fl_lossy/q_auto/c_fill,g_faces:center,h_720,w_1280/662663",
+      "uuid": "802bc90e-4aca-453e-8d57-a6e3cefcbf6d",
+      "title": "Samsung, LG on alert as US plans additional 50% steel tariff on appliance imports",
+      "description": "Samsung Electronics and LG Electronics are scrambling to assess the impact of Washington's decision to add home appliances to a list of derivatives subject to a...",
+      "keywords": "",
+      "snippet": "",
+      "url": "https://www.koreatimes.co.kr/business/companies/20250613/samsung-lg-on-alert-as-us-plans-additional-50-steel-tariff-on-appliance-imports",
+      "image_url": "https://newsimg.koreatimes.co.kr/2025/06/13/7e6d8897-c6d1-4e36-a613-d917e17d85f1.jpg",
       "language": "en",
-      "published_at": "2025-06-13T06:00:26.000000Z",
-      "source": "jpost.com",
+      "published_at": "2025-06-13T06:57:02.000000Z",
+      "source": "koreatimes.co.kr",
       "categories": [
         "general"
       ],
       "relevance_score": null,
-      "locale": "il"
+      "locale": "kr"
+    },
+    {
+      "uuid": "9f15aaef-c154-40af-acb6-8f3cfced19f8",
+      "title": "President signals deregulation drive, aims for policy sync with big businesses",
+      "description": "President Lee Jae-myung held his first meeting with the heads of Korea’s top business groups, Friday, pledging to eliminate unnecessary regulations and establ...",
+      "keywords": "",
+      "snippet": "",
+      "url": "https://www.koreatimes.co.kr/southkorea/politics/20250613/president-signals-deregulation-drive-aims-for-policy-sync-with-big-businesses",
+      "image_url": "https://newsimg.koreatimes.co.kr/2025/06/13/932d9f01-e92c-4ad6-ad5f-ee4ea453b1c6.jpg",
+      "language": "en",
+      "published_at": "2025-06-13T06:57:02.000000Z",
+      "source": "koreatimes.co.kr",
+      "categories": [
+        "general"
+      ],
+      "relevance_score": null,
+      "locale": "kr"
+    },
+    {
+      "uuid": "af251427-982e-4439-99b5-100e89884439",
+      "title": "Fans flock to BTS Festa amid growing hopes for full-group comeback",
+      "description": "As BTS' 2019 hit single",
+      "keywords": "",
+      "snippet": "",
+      "url": "https://www.koreatimes.co.kr/lifestyle/people-events/20250613/fans-flock-to-bts-festa-amid-growing-hopes-for-full-group-comeback",
+      "image_url": "https://newsimg.koreatimes.co.kr/2025/06/13/70e4708c-2a57-4f44-8f47-ab3811cb0ddf.jpg",
+      "language": "en",
+      "published_at": "2025-06-13T06:57:02.000000Z",
+      "source": "koreatimes.co.kr",
+      "categories": [
+        "general"
+      ],
+      "relevance_score": null,
+      "locale": "kr"
     }
   ]
 }
