@@ -41,6 +41,15 @@ app.get('/api/allNews/:language/:limit/:category', async (req, res) => {
     try {
         const response = await fetch(url);
         const data = await response.json();
+        const dir = path.join(__dirname, 'testJsonData');
+        if (!fs.existsSync(dir)) {
+            fs.mkdirSync(dir);
+        }
+        fs.writeFileSync(
+            path.join(dir, `topAllStories_${language}.json`),
+            JSON.stringify(data, null, 2),
+            'utf8'
+        );
         res.json(data);
     } catch (error) {
         res.status(500).json({ error: error.message });
