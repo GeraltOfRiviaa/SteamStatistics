@@ -45,6 +45,7 @@ app.get('/api/allNews/:language/:limit/:category', async (req, res) => {
         if (!fs.existsSync(dir)) {
             fs.mkdirSync(dir);
         }
+        
         fs.writeFileSync(
             path.join(dir, `topAllStories_${language}.json`),
             JSON.stringify(data, null, 2),

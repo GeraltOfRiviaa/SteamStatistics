@@ -1,61 +1,61 @@
 {
   "meta": {
-    "found": 7771694,
+    "found": 7771965,
     "returned": 3,
     "limit": 3,
     "page": 1
   },
   "data": [
     {
-      "uuid": "802bc90e-4aca-453e-8d57-a6e3cefcbf6d",
-      "title": "Samsung, LG on alert as US plans additional 50% steel tariff on appliance imports",
-      "description": "Samsung Electronics and LG Electronics are scrambling to assess the impact of Washington's decision to add home appliances to a list of derivatives subject to a...",
-      "keywords": "",
-      "snippet": "",
-      "url": "https://www.koreatimes.co.kr/business/companies/20250613/samsung-lg-on-alert-as-us-plans-additional-50-steel-tariff-on-appliance-imports",
-      "image_url": "https://newsimg.koreatimes.co.kr/2025/06/13/7e6d8897-c6d1-4e36-a613-d917e17d85f1.jpg",
+      "uuid": "deec227c-df7d-482f-87e4-922d75084b8e",
+      "title": "New Highway Linking Melli And Singtam In Sikkim To Ease NH10 Congestion, Bypass West Bengal",
+      "description": "",
+      "keywords": "Sikkim, Minister of Road Transport and Highways Nitin Gadkari",
+      "snippet": "The Ministry of Road Transport and Highways has approved a new Greenfield Highway project in Sikkim, which will connect Melli to Singtam bypassing NH 10 congest...",
+      "url": "https://swarajyamag.com/news-brief/new-highway-linking-melli-and-singtam-in-sikkim-to-ease-nh10-congestion-bypass-west-bengal",
+      "image_url": "https://swarajya.gumlet.io/swarajya/2022-02/bf3fa9e2-1242-4ff8-8ef7-75162e7be1a8/Nitin_Gadkari_1_16402465133x2.jpg?w=1200&h=600&format=jpg",
       "language": "en",
-      "published_at": "2025-06-13T06:57:02.000000Z",
-      "source": "koreatimes.co.kr",
+      "published_at": "2025-06-13T08:23:43.000000Z",
+      "source": "swarajyamag.com",
       "categories": [
         "general"
       ],
       "relevance_score": null,
-      "locale": "kr"
+      "locale": "in"
     },
     {
-      "uuid": "9f15aaef-c154-40af-acb6-8f3cfced19f8",
-      "title": "President signals deregulation drive, aims for policy sync with big businesses",
-      "description": "President Lee Jae-myung held his first meeting with the heads of Korea’s top business groups, Friday, pledging to eliminate unnecessary regulations and establ...",
-      "keywords": "",
-      "snippet": "",
-      "url": "https://www.koreatimes.co.kr/southkorea/politics/20250613/president-signals-deregulation-drive-aims-for-policy-sync-with-big-businesses",
-      "image_url": "https://newsimg.koreatimes.co.kr/2025/06/13/932d9f01-e92c-4ad6-ad5f-ee4ea453b1c6.jpg",
+      "uuid": "95214731-6677-4f1a-ba57-111822f1f1de",
+      "title": "NHAI Caps Project Allocation Per Engineer At 10 To Enhance Supervision Quality On National Highways",
+      "description": "",
+      "keywords": "engineer, National Highway Authority of India (NHAI)",
+      "snippet": "In a bid to improve quality control and supervision of National Highway works, the National Highways Authority of India (NHAI) has issued new guidelines limitin...",
+      "url": "https://swarajyamag.com/news-brief/nhai-caps-project-allocation-per-engineer-at-10-to-enhance-supervision-quality-on-national-highways",
+      "image_url": "https://swarajya.gumlet.io/swarajya/2023-02/c10c0a2d-782b-47f0-82c5-53c6e6221870/Ambala_Kotputli_greenfield_corridor.jpg?w=1200&h=600&format=jpg",
       "language": "en",
-      "published_at": "2025-06-13T06:57:02.000000Z",
-      "source": "koreatimes.co.kr",
+      "published_at": "2025-06-13T08:23:43.000000Z",
+      "source": "swarajyamag.com",
       "categories": [
         "general"
       ],
       "relevance_score": null,
-      "locale": "kr"
+      "locale": "in"
     },
     {
-      "uuid": "af251427-982e-4439-99b5-100e89884439",
-      "title": "Fans flock to BTS Festa amid growing hopes for full-group comeback",
-      "description": "As BTS' 2019 hit single",
-      "keywords": "",
-      "snippet": "",
-      "url": "https://www.koreatimes.co.kr/lifestyle/people-events/20250613/fans-flock-to-bts-festa-amid-growing-hopes-for-full-group-comeback",
-      "image_url": "https://newsimg.koreatimes.co.kr/2025/06/13/70e4708c-2a57-4f44-8f47-ab3811cb0ddf.jpg",
+      "uuid": "b0f98841-e69c-4c14-8020-46131c061e89",
+      "title": "Kailash Mansarovar Yatra Via Nathu La In Sikkim To Resume After Years; First Batch Of 50 Pilgrims To Reach Gangtok On 15 June",
+      "description": "",
+      "keywords": "Nathu La, Sikkim government, Kailash Mansarovar Yatra",
+      "snippet": "The Kailash Mansarovar Yatra through the Nathu La route in Sikkim is set to resume, with the first batch of 50 pilgrims expected to reach Gangtok on 15 June.\n\nT...",
+      "url": "https://swarajyamag.com/news-brief/kailash-mansarovar-yatra-via-nathu-la-in-sikkim-to-resume-after-years-first-batch-of-50-pilgrims-to-reach-gangtok-on-15-june",
+      "image_url": "https://swarajya.gumlet.io/swarajya/2023-04/00ef9c40-c2e3-495b-9719-8acc29b20495/Sikkim.png?w=1200&h=600&format=jpg",
       "language": "en",
-      "published_at": "2025-06-13T06:57:02.000000Z",
-      "source": "koreatimes.co.kr",
+      "published_at": "2025-06-13T08:23:43.000000Z",
+      "source": "swarajyamag.com",
       "categories": [
         "general"
       ],
       "relevance_score": null,
-      "locale": "kr"
+      "locale": "in"
     }
   ]
 }
